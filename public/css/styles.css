@@ -1,0 +1,56 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 600;
+}
+
+h4{
+  font-weight: 600;
+  color: #696969;
+}
+
+/* Column on left containing information about the algorithm */
+.info-col{
+  margin-top: 3%;
+  padding: 0 2%;
+  border-right: 5px solid #cecece;
+}
+
+/* CHESSBOARD */
+.chess-col{
+  margin: 5% auto 2%;
+}
+
+.chessboard{
+  width: 40vw;
+}
+
+.square{
+  height: 5vw;
+  padding: 2% 2%;
+}
+
+.dark {
+  background-color: #7d8796;
+}
+
+.light {
+  background-color: #e8ebef;
+}
+
+/* DISPLAYING SOLUTION */
+
+.local-minima {
+  color: red;
+  font-weight: 600;
+}
+
+.global-minima {
+  color: green;
+  font-weight: 600;
+}

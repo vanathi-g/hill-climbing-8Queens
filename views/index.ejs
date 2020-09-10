@@ -1,0 +1,17 @@
+<%- include('header'); -%>
+
+<strong>How to use this visualizer:</strong> Click <em>Random</em> to generate a random placement of eight queens on the board or select a square on the chessboard to place a queen. You may place only one queen per row. Once 8 queens have been
+placed, click <em>Visualize</em> to view how the algorithm arrives at a global or local minima.
+<hr />
+
+<div class="container">
+  <form id="queen-form" class="Visualize" action="/solution" method="post">
+    <input id="queen-inp" type="hidden" name="queenArray" value=""></input>
+    <div class="d-flex justify-content-between">
+      <button id="generate-random" class="index-btn btn btn-lg btn-outline-dark" type="button">Random!</button>
+      <button id="visualize-btn" class="index-btn btn btn-lg btn-success" type="submit">Visualize</button>
+    </div>
+  </form>
+</div>
+
+<%- include('footer'); -%>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap --->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- For queen icon -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Varela+Round&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Hill Climb Visualizer</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="info-col col-lg-4">
+        <h1>8-Queens Problem</h1>
+        <h4>Hill Climbing Algorithm Visualizer</h4>
+        <hr />
+
+        <p><strong>Problem: </strong> We have to place 8 queens in a chessboard such that no queen is under attack from any other queen. Two queens on the same row, column or diagonal attack each other.</p>
+
+        <p><strong>Algorithm: </strong>Hill Climbing is a technique to solve certain optimization problems. In this technique, we start with a sub-optimal solution and the solution is improved repeatedly until some condition is maximized.</p>
+
+        <p>For this problem, the chessboard configuration is a state represented by a tuple (c1, c2, ... , c8). The value of tuple(i) is the column in which a queen is placed in the i'th row. The objective function to minimize is
+          the number of conflicts between the queens in a state.</p>
+
+        <p>
+          Note that the version of hill climbing implemented here is not complete i.e. it will not always find the global minima (zero conflicts). The algorithm might find a local minima and stop. Algorithms to avoid this problem include
+          variants such as Random-Restart Hill Climbing.
+        </p>
+
+
+        <hr />

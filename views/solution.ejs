@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+<strong>How to view the solution:</strong> Click play to view (or) replay the sequence of moves the algorithm performs to find a global (or) local minima.
+<hr />
+
+<% if(  objFuncVal == 0 ){ %>
+  <h3 class="global-minima">Global minima was found!</h3>
+<% } else { %>
+  <h3 class="local-minima">Local minima was reached.</h3>
+<% } %>
+<p>Minimized objective function value : <%= objFuncVal %></p>
+<br>
+
+<div class="container">
+  <div class="d-flex justify-content-between">
+    <input id="disable-queen-place" type="hidden" value=<%= solnSteps %>></input>
+    <a id="back-button" href="/" class="btn btn-lg btn-outline-dark">Back</a>
+    <button id="play-btn" type="button" class="btn btn-lg btn-success">Play</button>
+  </div>
+</div>
+
+
+<%- include('footer'); -%>
