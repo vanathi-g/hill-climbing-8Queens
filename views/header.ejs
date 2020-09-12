@@ -30,13 +30,20 @@
 
         <p><strong>Algorithm: </strong>Hill Climbing is a technique to solve certain optimization problems. In this technique, we start with a sub-optimal solution and the solution is improved repeatedly until some condition is maximized.</p>
 
-        <p>For this problem, the chessboard configuration is a state represented by a tuple (c1, c2, ... , c8). The value of tuple(i) is the column in which a queen is placed in the i'th row. The objective function to minimize is
-          the number of conflicts between the queens in a state.</p>
+        <div class="d-flex justify-content-center">
+          <button id="read-more-btn" type="button" data-toggle="collapse" data-target="#filters" class="btn btn-sm collapsed read-btn"> <i class="fa fa-2x fa-angle-down"> </i></button>
+        </div>
+        <div id="filters" class="collapse">
 
-        <p>
-          Note that the version of hill climbing implemented here is not complete i.e. it will not always find the global minima (zero conflicts). The algorithm might find a local minima and stop. Algorithms to avoid this problem include
-          variants such as Random-Restart Hill Climbing.
-        </p>
-
+          <p>For this problem, the chessboard configuration is a state represented by a tuple (c1, c2, ... , c8). The value of tuple(i) is the column in which a queen is placed in the i'th row. The objective function to minimize is
+            the number of conflicts between the queens in a state.</p>
+          <p>
+            Note that the version of hill climbing implemented here is not complete i.e. it will not always find the global minima (zero conflicts). The algorithm might find a local minima and stop. Algorithms to avoid this problem include
+            variants such as Random-Restart Hill Climbing.
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button id="read-less-btn" type="button" data-toggle="collapse" data-target="#filters" class="btn btn-sm collapsed read-btn"> <i class="fa fa-2x fa-angle-up"> </i></button>
+        </div>
 
         <hr />

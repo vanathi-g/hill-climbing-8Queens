@@ -4,35 +4,44 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1{
+h1 {
   font-family: 'Varela Round', sans-serif;
   font-weight: 600;
 }
 
-h4{
+h4 {
   font-weight: 600;
   color: #696969;
 }
 
 /* Column on left containing information about the algorithm */
-.info-col{
+.info-col {
   margin-top: 3%;
   padding: 0 2%;
   border-right: 5px solid #cecece;
 }
 
 /* CHESSBOARD */
-.chess-col{
+.chess-col {
   margin: 5% auto 2%;
 }
 
-.chessboard{
+.chessboard {
   width: 40vw;
 }
 
-.square{
+.square {
+  display: flex;
   height: 5vw;
-  padding: 2% 2%;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+}
+
+.queen-icon{
+  font-size: 3vw;
 }
 
 .dark {
@@ -44,7 +53,6 @@ h4{
 }
 
 /* DISPLAYING SOLUTION */
-
 .local-minima {
   color: red;
   font-weight: 600;
@@ -53,4 +61,34 @@ h4{
 .global-minima {
   color: green;
   font-weight: 600;
+}
+
+/* BUTTONS */
+
+.solution-btn, .index-btn{
+  margin-top: 5%;
+}
+
+.read-btn{
+  background-color: white;
+}
+
+@media (max-width: 950px){
+  .info-col {
+    padding: 6% 5%;
+    border-right: none;
+  }
+
+  .chessboard {
+    width: 56vw;
+    margin-bottom: 5%;
+  }
+
+  .square{
+    height: 7vw;
+  }
+
+  .queen-icon{
+    font-size: 5vw;
+  }
 }

@@ -2,6 +2,10 @@
 var color;
 var queens = [];
 
+$('#read-less-btn').hide();
+
+var icon_str = '<i class="fas fa-chess-queen queen-icon"></i>';
+
 // Renders the chessboard
 for (var i=0; i < 8; i++){
   var board = $('.container .row'+i);
@@ -10,6 +14,7 @@ for (var i=0; i < 8; i++){
     makeSquare(color, 8*i+j);
   }
 }
+
 checkLengthOfQueens();
 
 // Utility function that enables "visualize" button only when 8 queens have been placed
@@ -52,13 +57,17 @@ function clearBoard(){
     $('.square').empty();
 }
 
+function toggleReadButtons(){
+  $('#read-more-btn').toggle();
+  $('#read-less-btn').toggle();
+}
+
 /* ALLOW USER TO PLACE QUEENS ON THE CHESSBOARD */
 
 // Place a queen when a "square" is clicked
 if( !$("#disable-queen-place").length )
 {
   $('.square').click(function(){
-    console.log(queens);
     const id = parseInt(this.id);
     const ind = queens.indexOf(id);
 
@@ -81,7 +90,7 @@ if( !$("#disable-queen-place").length )
     else
     {
       queens.push(id);
-      $('#'+id).html('<i class="fas fa-chess-queen fa-4x queen-icon"></i>');
+      $('#'+id).html(icon_str);
     }
     checkLengthOfQueens();
     return;
@@ -96,7 +105,7 @@ $('#generate-random').click(function(){
     const r = Math.floor(Math.random()*8);
     const id = 8*i + r;
     queens.push(id);
-    $('#'+id).html('<i class="fas fa-chess-queen fa-4x queen-icon"></i>');
+    $('#'+id).html(icon_str);
   }
   checkLengthOfQueens();
 });
@@ -106,3 +115,6 @@ $('#queen-form').submit(function(evt){
   var temp = queens.toString();
   $('#queen-inp').attr("value",temp);
 });
+
+// If read more button is clicked:
+$('.read-btn').click(toggleReadButtons)

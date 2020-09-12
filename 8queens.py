@@ -26,9 +26,9 @@ class EightQueensProblem:
 	# Computes the objective function value for a given state
 	def value(self, state):
 		num_conflicts = 0
-		for (r1, c1) in enumerate(state):
-			for (r2, c2) in enumerate(state):
-				if (r1, c1) != (r2, c2):
+		for (c1, r1) in enumerate(state):
+			for (c2, r2) in enumerate(state):
+				if (c1, r1) != (c2, r2):
 					num_conflicts += self.conflict(r1, c1, r2, c2)
 		return num_conflicts
 
