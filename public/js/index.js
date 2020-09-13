@@ -57,9 +57,14 @@ function clearBoard(){
     $('.square').empty();
 }
 
-function toggleReadButtons(){
-  $('#read-more-btn').toggle();
-  $('#read-less-btn').toggle();
+function toggleReadButtons(direction){
+  let time = 0;
+  if(direction == 'up')
+    time = 300;
+  setTimeout(function(){
+    $('#read-more-btn').toggle();
+    $('#read-less-btn').toggle();
+  }, time);
 }
 
 /* ALLOW USER TO PLACE QUEENS ON THE CHESSBOARD */
@@ -116,5 +121,11 @@ $('#queen-form').submit(function(evt){
   $('#queen-inp').attr("value",temp);
 });
 
-// If read more button is clicked:
-$('.read-btn').click(toggleReadButtons)
+/* If read more/less buttons are clicked:*/
+$('#read-more-btn').click(function(){
+  toggleReadButtons('down');
+});
+
+$('#read-less-btn').click(function(){
+  toggleReadButtons('up');
+});
