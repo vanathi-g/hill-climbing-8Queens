@@ -8,4 +8,3 @@ See the visualizer in action [here](https://hill-climb-8queens.herokuapp.com/)!
 <img src="/git-img/readme-img.png" width="900" height="450"></img>
 
 ---
-**Note** : Currently this visualizer does not render correctly on mobile screens.
